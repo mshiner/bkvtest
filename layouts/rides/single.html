@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+<div class="container">
+    <h2>{{ .Title }}</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <h4>Date/Time</h4>
+            <p>{{ dateFormat "Monday, Jan 2, 2006" .Params.rideDate }}<br>
+                Start Time - {{ dateFormat "3:04 pm" .Params.rideDate }}<br>
+                Duration - {{ .Params.duration }}</p>
+            <h4>Ride starts from</h4>
+            <p>{{ .Params.startFrom }}</p>
+            <h4>Ride Category</h4>
+            <p>{{ .Params.categories }}</p>
+        </div>
+        <div class="col-md-8">
+        <div class=start-map>
+            <iframe width="500" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q={{ .Params.startFrom }}&amp;ie=UTF8&amp;&amp;output=embed"></iframe>
+        </div>
+        </div>
+    </div>
+
+    <h4>Details</h4>
+    {{ .Content }}
+</div>
+{{ partial "signup.html"}}
+<div class="container">
+    <hr>
+    <h4>People already signed up for this ride</h4>
+</div>
+
+{{ partial "footer.html" . }}

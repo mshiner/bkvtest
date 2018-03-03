@@ -1,0 +1,15 @@
+<div class="container">
+    <hr>
+    <h2>Next 3 Rides</h2>
+    <div class="row">
+    {{ range first 3 (.Data.Pages.ByParam "rideDate") }}
+        <div class="col-md-4">
+          <h4>{{ .Title }}</h4>
+          <p>Date/Time - {{ dateFormat "Mon, Jan 2, 2006" .Params.rideDate }}, {{ dateFormat "3:04 pm" .Params.rideDate }}<br>
+             Start From - {{ .Params.startFrom  }}</p>
+          <p>{{.Summary}}</p>
+          <p><a class="btn btn-outline-secondary" href="{{ .Permalink }}" role="button">View ride &raquo;</a></p>
+        </div>
+    {{ end }}
+    </div>
+</div>

@@ -1,0 +1,28 @@
+baseURL = "https://bkvelo.org.uk"
+languageCode = "en-gb"
+title = "BKVelo"
+
+[params.header]
+    title = "BKVelo"
+    info = "To Sweet's and Beyond..."
+    copyright = "2018 BKVelo.org.uk"
+    
+[menu]
+    [[menu.main]]
+    identifier = "home"
+    name       = "home"
+    url        = "/"
+    weight     = 0
+
+    [[menu.main]]
+    name = "about"
+    pre = "<i class='fas fa-heart'></i>"
+    weight = -1
+    identifier = "about"
+    url = "/about/"
+
+    [[menu.main]]
+    name = "get in touch"
+    pre = "<i class='fas fa-road'></i>"
+    weight = 2
+    url = "/contact/"

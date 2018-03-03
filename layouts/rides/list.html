@@ -1,0 +1,33 @@
+{{ partial "header.html" . }}
+<div class="container">
+<!-- Get a list of rides ordered by ride date - need to restrict this somehow to only type rides which would negate the need for the $page := . stuff -->
+<!-- Context is everything -->
+<h2>{{ .Title }}</h2>
+<div class="row">
+    <div class="col-md-3"><h3>Date/Time</h3></div>
+    <div class="col-md-9"><h3>Ride Details</h3></div>
+</div>
+{{ range where (.Data.Pages.ByParam "rideDate") "Type" "rides" }}
+<hr>
+<div class="row">
+    {{ $page := . }}
+    <div class="col-md-3">
+    {{ with .Params.rideDate }}
+        <p>Ride Date - {{ dateFormat "Monday, Jan 2, 2006" . }}
+           Start Time - {{ dateFormat "3:04 pm" . }}</p>
+    {{ end }}
+    {{ with .Params.startFrom }}
+        <p>Starts From - {{ . }}</p>
+    {{ end }}
+    </div>
+    <div class="col-md-9">
+    <h4><a href='{{ .Permalink }}'> {{ .Title }}</a> </h4>
+    {{ $page.Summary }}
+    Sign ups so far -
+    </div>
+</div>
+
+{{ end }}
+
+</div>
+{{ partial "footer.html" . }}
