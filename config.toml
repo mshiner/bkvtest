@@ -1,4 +1,4 @@
-baseURL = "https://bkvelo.org.uk"
+baseURL = "https://bkvelo.org.uk/"
 languageCode = "en-gb"
 title = "BKVelo"
 
@@ -6,7 +6,7 @@ title = "BKVelo"
     title = "BKVelo"
     info = "To Sweet's and Beyond..."
     copyright = "2018 BKVelo.org.uk"
-    
+
 [menu]
     [[menu.main]]
     identifier = "home"
