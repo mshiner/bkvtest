@@ -9,11 +9,10 @@ startFrom = "Draycott Village Hall"
 duration =  "4h"
 +++
 
-New event for 2018, good training for those off to Belgium >>   http://www.flanrou.com/flanrou-omloop.html
+New event for 2018, good training for those off to Belgium
 
 <!--more-->
-
-From the Website
+From the Website >>   http://www.flanrou.com/flanrou-omloop.html
 
 NEW FOR 2018 – OUR ‘BELGIAN CLASSIC’ – 100% ON TARMAC.
 SATURDAY 17th MARCH 2018

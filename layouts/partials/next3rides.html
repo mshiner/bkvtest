@@ -1,15 +1,40 @@
 <div class="container">
     <hr>
     <h2>Next 3 Rides</h2>
-    <div class="row">
-    {{ range first 3 (.Data.Pages.ByParam "rideDate") }}
-        <div class="col-md-4">
-          <h4>{{ .Title }}</h4>
-          <p>Date/Time - {{ dateFormat "Mon, Jan 2, 2006" .Params.rideDate }}, {{ dateFormat "3:04 pm" .Params.rideDate }}<br>
-             Start From - {{ .Params.startFrom  }}</p>
-          <p>{{.Summary}}</p>
-          <p><a class="btn btn-outline-secondary" href="{{ .Permalink }}" role="button">View ride &raquo;</a></p>
-        </div>
-    {{ end }}
-    </div>
+    <script>
+        var ridelist = [];
+        var nextride=1;
+        {{ $page := . }}
+        {{ range where (.Data.Pages.ByParam "rideDate") "Type" "rides" }}
+            ridelist.push({ link: "<a class='btn btn-outline-secondary' href='{{ .Permalink }}' role='button'>View ride &raquo;</a>",
+                            title: "<h4> {{ .Title }} </h4>",
+                            summary: " {{.Summary }}",
+                            signups: "Sign ups so far -",
+                            {{ with .Params.rideDate }}
+                                ridedate: 'Date/Time - {{ dateFormat "Monday, Jan 2, 2006" . }}, {{ dateFormat "3:04 pm" . }}',
+                                timestamp : {{ .Unix }},
+                            {{ end }}
+                            {{ with .Params.startFrom }}
+                                ridefrom: 'Start From - {{ . }}'
+                            {{ end }}
+                            })
+        {{end}}
+
+        document.write('<div class="row">');
+        for (i=0;i<ridelist.length;i++){
+            if (nextride === 4) { break;}
+            if (ridelist[i].timestamp>Math.round(new Date().getTime()/1000)){
+            document.write('<div class="col-md-4">'
+                                +ridelist[i].title
+                                +"<p>"+ridelist[i].ridedate+"<br>"
+                                +ridelist[i].ridefrom+"</p>"
+                                +"<p>"+ridelist[i].summary+"</p>"
+                                +ridelist[i].link
+                            +"</div>"
+                            );
+                        nextride++;
+                        }
+                    }
+        document.write('</div>');
+    </script>
 </div>
