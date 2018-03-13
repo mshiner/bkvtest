@@ -1,2 +1,22 @@
-    a {color: darkblue;}
-    a:hover {color: darkgrey;}
+    a {color: #2A3A87;}
+    a:hover {color: grey;}
+
+    .btn-primary,
+    .btn-primary:active,
+    .btn-primary:visited,
+    .btn-primary:focus,                 
+    .btn-primary:active:focus {
+        background-color: #2A3A87; border-color: #2A3A87;
+    }
+
+    .btn-primary:hover {
+        background-color: grey; border-color: grey;
+    }
+
+    .page-header {
+    padding-top: 2rem;
+    background-image: url(/images/frog.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center top;
+    }
