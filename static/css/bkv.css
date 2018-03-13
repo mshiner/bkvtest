@@ -4,7 +4,7 @@
     .btn-primary,
     .btn-primary:active,
     .btn-primary:visited,
-    .btn-primary:focus,                 
+    .btn-primary:focus,
     .btn-primary:active:focus {
         background-color: #2A3A87; border-color: #2A3A87;
     }
@@ -14,9 +14,9 @@
     }
 
     .page-header {
-    padding-top: 2rem;
-    background-image: url(/images/frog.svg);
+    padding-top: 7rem;
+    background-image: url(/images/weblogo.svg);
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: center top;
+    background-position: left top;
     }
