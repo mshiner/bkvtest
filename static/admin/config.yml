@@ -18,7 +18,7 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Creation Date", name: "date", widget: "hidden"}
+      - {label: "Creation Date", name: "date", widget: "datetime"}
       - {label: "Draft", name: "draft", widget: "boolean", default: false}
       - {label: "Categories", name: "categories", widget: "select", options: ["Audax", "Casuual/Family Ride", "Cyclocross", "Fixed", "Group Ride", "Sportive"]}
       - {label: "Ride Date", name: "rideDate", widget: "datetime"}
@@ -36,7 +36,7 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Creation Date", name: "date", widget: "hidden"}
+      - {label: "Creation Date", name: "date", widget: "datetime"}
       - {label: "Draft", name: "draft", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "reports" # Used in routes, e.g., /admin/collections/blog
@@ -49,6 +49,6 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Creation Date", name: "date", widget: "hidden"}
+      - {label: "Creation Date", name: "date", widget: "datetime"}
       - {label: "Draft", name: "draft", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
