@@ -3,8 +3,8 @@ title = "Breakfast in Bampton"
 date = 2018-02-23T17:10:03Z
 draft =  false
 categories = ["Group Ride"]
-rideDate = 2018-03-03T17:00:00Z
-expiryDate = 2018-03-20T16:00:00Z
+rideDate = 2018-03-23T17:00:00Z
+expiryDate = 2018-03-23T16:00:00Z
 startFrom = "EX5 7AP"
 duration = "4 Hours"
 +++

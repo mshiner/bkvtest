@@ -12,7 +12,8 @@
                             signups: "Sign ups so far -",
                             {{ with .Params.rideDate }}
                                 ridedate: 'Date/Time - {{ dateFormat "Monday, Jan 2, 2006" . }}, {{ dateFormat "3:04 pm" . }}',
-                                timestamp : {{ .Unix }},
+                                {{$t := time .}}
+                                timestamp : {{ $t.Unix }},
                             {{ end }}
                             {{ with .Params.startFrom }}
                                 ridefrom: 'Start From - {{ . }}'

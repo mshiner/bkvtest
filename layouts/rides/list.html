@@ -17,7 +17,8 @@
                         {{ with .Params.rideDate }}
                             ridedate: 'Ride Date - {{ dateFormat "Monday, Jan 2, 2006" . }}',
                             ridestart: 'Start Time - {{ dateFormat "3:04 pm" . }}',
-                            timestamp : {{ .Unix }},
+                            {{$t := time .}}
+                            timestamp : {{ $t.Unix }},
                         {{ end }}
                         {{ with .Params.startFrom }}
                             ridefrom: 'Start From - {{ . }}'
