@@ -1,13 +1,13 @@
-+++
-title = "Breakfast in Bampton"
-date = 2018-02-23T17:10:03Z
-draft =  false
-categories = ["Group Ride"]
-rideDate = 2018-03-23T17:00:00Z
-expiryDate = 2018-03-23T16:00:00Z
-startFrom = "EX5 7AP"
-duration = "4 Hours"
-+++
+---
+title: Breakfast in Bampton
+date: 2018-02-23T17:10:03.000Z
+draft: false
+categories: Audax
+rideDate: '2018-03-28T09:00:00+01:00'
+expiryDate: 2018-03-23T16:00:00.000Z
+startFrom: EX5 7AP
+duration: 4 Hours
+---
 
 We're going to Bampton..... probably a 100km ride.
 
