@@ -4,7 +4,7 @@ date: '2018-03-18T18:38:56+00:00'
 draft: false
 categories: Group Ride
 rideDate: '2018-03-22T09:00:56+00:00'
-expiryDate: '2018-03-18T18:38:56+00:00'
+expiryDate: '2018-03-31T00:00:00+01:00'
 startFrom: 'Geraardsbergenstraat 144, 9700 Oudenaarde, Belgium '
 duration: 5 Hours
 ---
