@@ -24,6 +24,7 @@
 
 
     {{ if eq ($.Scratch.Get "hasSignups") 0 }}
+        {{ $signups }}   
         <p>Doh! - Nobody has signed up yet.</p>
     {{ end }}
 </div>

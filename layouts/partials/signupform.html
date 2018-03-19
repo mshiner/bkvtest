@@ -5,8 +5,10 @@
     <h3>You can sign up here</h3>
 
     <form method="POST" action="https://api.staticman.net/v2/entry/mshiner/bkvelo/master/signups">
-        <input type="hidden" name="options[redirect]" value="{{ .Permalink }}#comment-submitted">
+        <input type="hidden" name="options[redirect]" value="{{ .Permalink }}#signup-submitted">
         <input type="hidden" name="options[entryId]" value="{{ .UniqueID }}">
+        <input type="hidden" name="options[rideTitle]" value="{{ .Title }}">
+
         <div class="row">
 			<div class="col-md-6">
                 <div class="form-group">
@@ -37,15 +39,8 @@
 </section>
 
 
-    <div id="post-submitted" class="modal">
+    <div id="signup-submitted" class="modal">
             <h3>Thank you</h3>
-            <p>Your post has been submitted and will be published once it has been approved.</p>
-            <p><a href="#" class="btn btn-success">OK</a></p>
+            <p>Your Signup to this ride has been submitted - you'll beadded to the rider list soon.</p>
+            <p><a href="{{ .Permalink }}" class="btn btn-success">OK</a></p>
     </div>
-        
-    <div id="post-error" class="modal">
-            <h3>OOPS!</h3>
-            <p>Your post has not been submitted.  Please return to the page and try again.  Thank You!</p>
-            <p><a href="#" class="btn btn-danger">OK</a></p>
-    </div>
-
