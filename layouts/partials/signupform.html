@@ -1,0 +1,51 @@
+<section class="comment_form"></section>
+<div class="container">
+    
+    <a id="comment-form"></a>
+    <h3>You can sign up here</h3>
+
+    <form method="POST" action="https://api.staticman.net/v2/entry/mshiner/bkvelo/master">
+        <input type="hidden" name="options[redirect]" value="{{ .Permalink }}#comment-submitted">
+        <input type="hidden" name="options[entryId]" value="{{ .UniqueID }}">
+        <div class="row">
+			<div class="col-md-6">
+                <div class="form-group">
+                    <input name="fields[name]" class="form-control" type="text" placeholder="Your name">
+                </div>  
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input name="fields[email]" class="form-control" type="email" placeholder="Your email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <textarea name="fields[body]" class="form-control" placeholder="Message" rows="2"></textarea>    
+                </div>
+            </div>
+            <div class="col-md-12 text-center">
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Sign Up">
+                </div>
+            </div>
+        </div>
+        
+    </form>
+
+</div>
+</section>
+
+
+    <div id="post-submitted" class="modal">
+            <h3>Thank you</h3>
+            <p>Your post has been submitted and will be published once it has been approved.</p>
+            <p><a href="#" class="btn btn-success">OK</a></p>
+    </div>
+        
+    <div id="post-error" class="modal">
+            <h3>OOPS!</h3>
+            <p>Your post has not been submitted.  Please return to the page and try again.  Thank You!</p>
+            <p><a href="#" class="btn btn-danger">OK</a></p>
+    </div>
+

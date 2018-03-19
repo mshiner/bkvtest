@@ -22,10 +22,6 @@
     <h4>Details</h4>
     {{ .Content }}
 </div>
-{{ partial "signup.html"}}
-<div class="container">
-    <hr>
-    <h4>People already signed up for this ride</h4>
-</div>
-
+{{ partial "signupform.html"}}
+{{ partial "signups.html" . }}
 {{ partial "footer.html" . }}
