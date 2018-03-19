@@ -57,24 +57,3 @@ comments:
   # the name of the field and values are possible transformation types.
   transforms:
     email: md5
-
-posts:
-  allowedFields: ["title", "body"]
-  allowedOrigins: ["localhost", "bkvelo.netlify.com"]
-  branch: "master"
-  generatedFields:
-    date:
-      type: date
-    slug:
-      type: slugify
-      options:
-        field: title
-    tags: ["user-generated"]
-  format: "frontmatter"
-  moderation: false
-  name: "BKVelo"
-  path: "content/rides"
-  filename: "{fields.slug}"
-  requiredFields: ["title", "body"]
-  transforms:
-    body: "frontmatterContent"
