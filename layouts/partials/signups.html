@@ -9,17 +9,26 @@
 
     {{ range $signups }}
         {{ if eq .Name $rideSlug }}
-            {{ $.Scratch.Add "hasSignups" 1 }}
-            {{ range $index, $signups := (index $.Site.Data.signups $rideSlug ) }}
-            <div class="post-signup">
-                <div class="post-signup-header">
-                    <img class="post-signup-avatar" src="https://www.gravatar.com/avatar/{{ .email }}?s=100">
-                    <p class="post-signup-info"><strong>{{ .name }}</strong><br>{{ dateFormat "02/01/2006" .date }}</p>
-                </div>
-                {{ .message | markdownify }}
-            </div>  
-            {{ end }}
+        {{ $.Scratch.Add "hasSignups" 1 }}
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>Rider</th>
+                    <th>Signed up on</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ range $index, $signups := (index $.Site.Data.signups $rideSlug ) }}
+                <tr>
+                    <td><strong>{{ .name }}</strong></td>
+                    <td>{{ dateFormat "02/01/2006" .date }}</td>
+                    <td>{{ .message | markdownify }}</td>
+                </tr>
+                {{ end }}
+            </tbody>
         {{ end }}
+        </table>
     {{ end }}
 
 
