@@ -7,8 +7,6 @@
     <form method="POST" action="https://api.staticman.net/v2/entry/mshiner/bkvelo/master/signups">
         <input type="hidden" name="options[redirect]" value="{{ .Permalink }}#signup-submitted">
         <input type="hidden" name="options[entryId]" value="{{ .UniqueID }}">
-        <input type="hidden" name="options[rideTitle]" value="{{ .Title }}">
-
         <div class="row">
 			<div class="col-md-6">
                 <div class="form-group">
@@ -23,7 +21,7 @@
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    <textarea name="fields[body]" class="form-control" placeholder="Message" rows="2"></textarea>    
+                    <textarea name="fields[message]" class="form-control" placeholder="Message" rows="2"></textarea>    
                 </div>
             </div>
             <div class="col-md-12 text-center">
