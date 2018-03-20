@@ -8,7 +8,7 @@
     {{ $rideSlug := .Source.BaseFileName }}
 
     {{ range $signups }}
-        {{ if eq .Name $postSlug }}
+        {{ if eq .Name $rideSlug }}
             {{ $.Scratch.Add "hasSignups" 1 }}
             {{ range $index, $signups := (index $.Site.Data.signups $rideSlug ) }}
             <div class="post-signup">
